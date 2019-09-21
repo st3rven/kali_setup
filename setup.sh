@@ -49,7 +49,6 @@ compute_start_time(){
 
 configure_environment(){
     echo "HISTTIMEFORMAT='%m/%d/%y %T '" >> /root/.bashrc
-    apt install apt-transport-https
 }
 
 apt_update() {  
