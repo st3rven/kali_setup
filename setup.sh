@@ -503,8 +503,8 @@ install_gnome_theme(){
         apt-get install -y -q $package >> script.log 2>>script_error.log
     done
     cd vimix-gtk-themes/
-    ./vimix-gtk-themes/Install -n vimix -c dark -t beryl
-    rm -rf ./vimix-gtk-themes/
+    ./Install -n vimix -c dark -t beryl
+    rm -rf /root/Downloads/vimix-gtk-themes/
 }
 
 configure_vim(){
