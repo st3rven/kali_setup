@@ -1,7 +1,7 @@
 # kali_setup
 
 
-this is a for my own use, with some upgrades from the original.
+this is a script for my own use, with some upgrades from the original.
 ----------------------------------------------------------------------------------------------------
 -----------------------------------
 Kali Setup script
