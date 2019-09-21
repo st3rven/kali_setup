@@ -14,3 +14,5 @@ apt update && apt upgrade -y
 
 curl -L --silent https://bit.ly/31BE8PI | bash
 ```
+
+for default the majority of the options has been disable, feel free to change wherever you needs.
