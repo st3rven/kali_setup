@@ -298,8 +298,11 @@ install_mega() {
 	    printf "${CLEAR_LINE}❌${RED} $1 failed ${NO_COLOR}\n"
         echo "$1 failed " >> script.log
     fi
-    apt_package_install ./megasync-Debian_9.0_amd64*
-    rm -f ./megasync-Debian_9.0_amd64*
+    wget --quiet http://ftp.cl.debian.org/debian/pool/main/libr/libraw/libraw15_0.17.2-6+deb9u1_amd64.deb
+    apt_package_install ./libraw15* >> script.log 2>>script_error.log
+    apt install libcrypto++6 libmediainfo0v5 libzen0v5 >> script.log 2>>script_error.log
+    apt_package_install ./megasync-Debian_9.0_amd64* >> script.log 2>>script_error.log
+    rm -f ./megasync-Debian_9.0_amd64*  ./libraw15*
 }
 
 
