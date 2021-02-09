@@ -83,8 +83,7 @@ install_base_os_tools(){
     # jq - cli json processor
     # micro - text editor
     # pip3 and pip
-    # docker
-    for package in strace ltrace sshfs nfs-common sshuttle autossh dbeaver jq micro python3-pip python-pip net-tools sshuttle docker docker-compose
+    for package in strace ltrace sshfs nfs-common sshuttle autossh dbeaver jq micro python3-pip python-pip net-tools sshuttle
     do
         apt install -y -q "$package" >> script.log 2>>script_error.log
     done 
@@ -110,6 +109,7 @@ install_python3_related(){
     # future - 
     # paramiko - 
     # selenium - control chrome browser
+    # awscli
     pip3 -q install pipenv pysmb pycryptodome pysnmp requests future paramiko selenium awscli
 }
 
@@ -315,7 +315,7 @@ main () {
     install_recon_tools
     install_sublime
     install_opera
-    install_mega
+    #install_mega
     install_stegcracker
     install_nmap_vulscan
     john_bash_completion
