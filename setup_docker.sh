@@ -2,7 +2,9 @@
 # icons
 # ❌⏳💀🎉 ℹ️ ⚠️ 🚀 ✅ ♻ 🚮 🛡 🔧  ⚙ 
 
-# set -x 
+# run update and upgrade, before running script
+# apt update && apt upgrade -y
+## curl -L --silent https://bit.ly/31BE8PI | bash
 #
 #
 # var
@@ -85,7 +87,7 @@ install_base_os_tools(){
     # micro - text editor
     # pip3 and pip
     # apt-utils
-    for package in strace ltrace sshfs nfs-common sshuttle autossh jq micro python3-pip python-pip net-tools sshuttle wget curl git mlocate apt-utils
+    for package in strace ltrace sshfs nfs-common sshuttle autossh jq micro python3-pip python-pip net-tools sshuttle wget curl git mlocate apt-utils nano
     do
         apt install -y -q "$package" >> "$home"/script.log 2>>"$home"/script_error.log
     done 

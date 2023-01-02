@@ -91,7 +91,7 @@ install_base_os_tools(){
     # micro - text editor
     # pip3 and pip
     # apt-utils
-    for package in strace ltrace sshfs nfs-common sshuttle autossh dbeaver jq micro python3-pip python-pip net-tools sshuttle wget curl git mlocate apt-utils
+    for package in strace ltrace sshfs nfs-common sshuttle autossh dbeaver jq micro python3-pip python-pip net-tools sshuttle wget curl git mlocate apt-utils nano
     do
         apt install -y -q "$package" >> script.log 2>>script_error.log
     done 
