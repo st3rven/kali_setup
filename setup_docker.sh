@@ -286,9 +286,10 @@ additional_clean(){
 
 manual_stuff_to_do(){
     printf "\n  ⏳  Adding Manual work\n" | tee -a "$home"/script.log
-    echo ""
-    echo "  ⚠️ Complete zsh configuration" >> "$home"/script_todo.log
+    echo "⚠️ Configure Metasploit" >> "$home"/script_todo.log
     echo "" >> "$home"/script_todo.log
+    #echo "  ⚠️ Complete zsh configuration" >> "$home"/script_todo.log
+    #echo "" >> "$home"/script_todo.log
 }
 
 compute_finish_time(){
@@ -299,7 +300,11 @@ compute_finish_time(){
 
 script_todo_print() {
     printf "  ⏳  Printing notes\n" | tee -a "$home"/script.log
-    cat "$home"/script_todo.log || printf "   ⚠️ script_todo.log file not find\n"
+    cd "$home"
+    cat script_todo.log 2>>/dev/null
+    if [[ $? -ne 0 ]]; then
+        printf "   ⚠️ script_todo.log file not find\n"
+    fi 
 }
 
 main () {
@@ -320,11 +325,11 @@ main () {
     install_recon_tools
     install_stegcracker
     install_nmap_vulscan
-    configure_metasploit
+    #configure_metasploit
     additional_clean
-    #manual_stuff_to_do
-    compute_finish_time
+    manual_stuff_to_do
     script_todo_print
+    compute_finish_time
 }
 
 main
