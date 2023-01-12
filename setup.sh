@@ -251,7 +251,7 @@ install_recon_tools(){
 install_bloodhound(){
     printf " ⏳  Installing BloodHound\n" | tee -a script.log
     # bloodhound
-    for package in bloodhound 
+    for package in bloodhound bloodhound.py
     do
         apt install -y -q $package >> script.log 2>>script_error.log
     done
