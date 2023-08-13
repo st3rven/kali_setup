@@ -2,13 +2,10 @@
 
 Kali Setup script
 
-Update and upgrade Kali before running the script.  On fresh installs there are a few programs that 
-have post install scripts that don't work well with unattended upgrades.
+The whole idea here is to use this script as a template for your preference tools. 
 
 ```
-apt update && apt upgrade -y
-
-./setup.sh <user>
+sudo ./setup.sh
 ```
 
 ### Docker option
